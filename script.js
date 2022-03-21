@@ -44,4 +44,5 @@ function renderComments(comments) {
   container.innerHTML = rawHtml;
 }
 
-renderComments(comments);
+const goodComments = comments.filter((comment) => comment.id !== badCommentId);
+renderComments(goodComments);
